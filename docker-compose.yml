@@ -1,0 +1,21 @@
+
+version: '3.6'
+
+services:
+  backend:
+    build: docker-node-backend
+    container_name: backend
+    tty: true
+    volumes:
+      - ./src/backend:/app:cached
+    ports:
+      - "3000:3000"
+
+  frontend:
+    build: docker-node-frontend
+    container_name: frontend
+    tty: true
+    volumes:
+      - ./src/frontend:/app:cached
+    ports:
+      - "8080:8080"
