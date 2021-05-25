@@ -24,7 +24,7 @@ export default {
     return {
       messages: [],
       message: "",
-      socket: io("http://localhost:3000", {
+      socket: io("http://192.168.56.107:3000", {
         withCredentials: true,
         extraHeaders: {
           "my-custom-header": "abcd",
